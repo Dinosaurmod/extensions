@@ -194,19 +194,13 @@ class LibraryItemComponent extends React.PureComponent {
 
                             let contents, fetchResult;
 
-                            fetch(url)
+                            fetchResult = return fetch(url)
                                 .then(response => {
                                     if (!response.ok) {
                                         throw new Error("HTTP error " + response.status);
                                     }
-                                    return response.text();
+                                    return response;
                                 })
-                                .then(text => {
-                                    fetchResult = text;
-                                })
-                                .catch(error => {
-                                    fetchResult = error;
-                                });
 
                             function downloadString(text, fileType, fileName) {
                                 var blob = new Blob([text], { type: fileType });
@@ -222,7 +216,7 @@ class LibraryItemComponent extends React.PureComponent {
                                 setTimeout(function() { URL.revokeObjectURL(a.href); }, 1500);
                             }
 
-                            fetchResult.then((e) => {contents = e}, (e) => {console.log(e); contents = "ERROR FETCHING"})
+                            if (fetchResult.ok) fetchResult.then((e) => contents = e; () => contents = "ERROR FETCHING")
 
                             if (contents !== "ERROR FETCHING") downloadString(contents, "text/javascript", this.props.name.replaceAll(' ',''));
                         }}
