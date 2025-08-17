@@ -38,7 +38,18 @@ class ExtensionLibrary extends React.Component {
         });
 
         return (
-            [extensionNodes]
+            <React.Fragment>
+                <style>
+                    .extension-library {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 1rem;
+                    }
+                </style>
+                <div className="extension-library">
+                    {extensionNodes}
+                </div>
+            </React.Fragment>
         );
     }
 }
