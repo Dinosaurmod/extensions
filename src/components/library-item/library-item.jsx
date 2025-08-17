@@ -216,7 +216,11 @@ class LibraryItemComponent extends React.PureComponent {
                                 setTimeout(function() { URL.revokeObjectURL(a.href); }, 1500);
                             }
 
-                            if (fetchResult.ok) fetchResult.then((e) => contents = e, () => contents = "ERROR FETCHING")
+                            if (fetchResult.ok) {
+                                contents = fetchResult.text()
+                            } else {
+                                contents = "ERROR FETCHING"
+                            }
 
                             if (contents !== "ERROR FETCHING") downloadString(contents, "text/javascript", this.props.name.replaceAll(' ',''));
                         }}
