@@ -222,6 +222,7 @@ class LibraryItemComponent extends React.PureComponent {
                                 console.error("error fetching")
                             } else {
                                 contents = fetchResult.text()
+                                console.log(contents.then(e => {return e}))
                             }
 
                             if (contents !== "ERROR FETCHING") downloadString(contents.then(e => {return e}), "text/javascript", this.props.name.replaceAll(' ',''));
