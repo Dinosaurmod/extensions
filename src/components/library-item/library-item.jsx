@@ -2,7 +2,7 @@ import {FormattedMessage, intlShape} from 'react-intl';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import './library-item.module.css';
+import './library-item.css';
 import classNames from 'classnames';
 
 import bluetoothIconURL from './bluetooth.svg';
