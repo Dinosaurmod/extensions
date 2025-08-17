@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {injectIntl, intlShape} from 'react-intl';
 
+import moonIcon from './moon.svg';
+
 import styles from './menu-bar.css';
 
 const MenuBarComponent = function (props) {

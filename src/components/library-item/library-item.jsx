@@ -14,8 +14,8 @@ class LibraryItemComponent extends React.PureComponent {
         return (
             <div
                 className={classNames(
-                    styles.libraryItem,
-                    styles.featuredItem,
+                    styles["library-item"],
+                    styles["featured-item"],
                     {
                         [styles.disabled]: this.props.disabled
                     },
