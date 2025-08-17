@@ -7,8 +7,6 @@ import {defineMessages, injectIntl, intlShape} from 'react-intl';
 import MenuBar from '../../containers/menu-bar.jsx';
 import ExtensionLibrary from '../../containers/extension-library.jsx';
 
-import {BRAND_NAME} from '../../lib/brand.js';
-
 import './gui.css';
 
 const GUIComponent = props => {
@@ -23,7 +21,7 @@ const GUIComponent = props => {
                 intl={intl}
                 {...componentProps}
             />
-            <h1>{BRAND_NAME}</h1>
+            <section />
             <ExtensionLibrary
                 intl={intl}
                 {...componentProps}

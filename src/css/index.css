@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;/*'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+    background-color: white;
+    color: #111111;
+}
+
+a.active, a:hover, li #darkModeToggle.active {
+    border: 0px solid white;
+    background-color: rgba(0, 0, 0, 0.125);
+    /* transition: 0.5s; */
+}
+
+li #darkModeToggle img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle; /* Align the image vertically */
+    cursor: pointer;
+}
+
+li #IconImage img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle; /* Align the image vertically */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+#IconImage img:hover {
+    background-color: transparent;
+    transform: scale(1.1);
+}
+
+#IconImage img:not(:hover) {
+    background-color: transparent;
+    transform: scale(1); /* Return to regular size when not hovered */
+}
+
+body.dark-mode {
+    background-color: #111111;
+    color: white;
+}
