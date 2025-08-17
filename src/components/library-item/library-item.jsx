@@ -94,27 +94,6 @@ class LibraryItemComponent extends React.PureComponent {
                     </div>
                 )}
 
-                {this.props.credits && this.props.credits.length > 0 && (
-                    <div className={"featuredExtensionCollaboration"}>
-                        <div>
-                            <FormattedMessage
-                                defaultMessage="Credits to:"
-                                description="Appears in the extension list. Followed by a list of names."
-                                id="tw.createdBy"
-                            />
-                            {' '}
-                            {this.props.credits.map((credit, index) => (
-                                <React.Fragment key={index}>
-                                    {credit}
-                                    {index !== this.props.credits.length - 1 && (
-                                        ', '
-                                    )}
-                                </React.Fragment>
-                            ))}
-                        </div>
-                    </div>
-                )}
-
                 {this.props.bluetoothRequired || this.props.internetConnectionRequired || this.props.collaborator ? (
                     <div className={"featuredExtensionMetadata"}>
                         <div className={"featuredExtensionRequirement"}>
@@ -169,6 +148,24 @@ class LibraryItemComponent extends React.PureComponent {
                                     </div>
                                 </div>
                             ) : null}
+                            {this.props.credits && this.props.credits.length > 0 && (
+                                <div>
+                                    <FormattedMessage
+                                        defaultMessage="Credits to:"
+                                        description="Appears in the extension list. Followed by a list of names."
+                                        id="tw.createdBy"
+                                    />
+                                    {' '}
+                                    {this.props.credits.map((credit, index) => (
+                                        <React.Fragment key={index}>
+                                            {credit}
+                                            {index !== this.props.credits.length - 1 && (
+                                                ', '
+                                            )}
+                                        </React.Fragment>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     </div>
                 ) : null}

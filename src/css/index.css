@@ -45,3 +45,7 @@ body.dark-mode {
     background-color: #111111;
     color: white;
 }
+
+.not-styled {
+    all: initial;
+}

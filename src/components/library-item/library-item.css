@@ -23,6 +23,12 @@
     cursor: pointer;
 }
 
+body.dark-mode .libraryItem {
+    color: #eee;
+    background: #111;
+    border-color: #343434;
+}
+
 .libraryItemExtension {
     align-self: stretch;
 }
