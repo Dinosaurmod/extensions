@@ -157,6 +157,18 @@ class LibraryItemComponent extends React.PureComponent {
                                     </div>
                                 </div>
                             ) : null}
+                            {this.props.extDeveloper ? (
+                                <div>
+                                    <div>
+                                        Created by
+                                    </div>
+                                    <div
+                                        className={styles.featuredExtensionMetadataDetail}
+                                    >
+                                        {this.props.extDeveloper}
+                                    </div>
+                                </div>
+                            ) : null}
                         </div>
                     </div>
                 ) : null}
@@ -171,6 +183,7 @@ LibraryItemComponent.propTypes = {
     intl: intlShape,
     bluetoothRequired: PropTypes.bool,
     collaborator: PropTypes.string,
+    extDeveloper: PropTypes.string,
     description: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.node

@@ -1,0 +1,18 @@
+section {
+    background: white;
+    color: #111111;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+section.dark-mode {
+    background-color: #111111;
+    color: white;
+}
+
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

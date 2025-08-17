@@ -1,0 +1,72 @@
+@import "../../css/colors.css";
+
+.menu-bar {
+    height: 60px;
+    width: 100%;
+    background-color: var(--motion-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-bar_ul {
+    float: center;
+    margin-left: 50;
+}
+
+.menu-bar_li {
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 60px;
+}
+
+.menu-bar_li_left {
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 60px;
+    position: absolute;
+    left: 0;
+}
+
+.menu-bar_a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+
+.menu-bar_input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+#menubar_searchIcon {
+    font-size: 18px;
+    vertical-align: middle; /* Align the image vertically */
+    border: 1px solid rgb(63, 63, 63);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.menu-bar.dark-mode {
+    background-color: var(--motion-primary-dark);
+}
+.menu-bar.dark-mode input[type="text"] {
+    color: white; /* Darker color for dark mode */
+    background-color: #333333; /* Darker color for dark mode */
+}
+.menu-bar.dark-mode #menubar_searchIcon {
+    color: white; /* Darker color for dark mode */
+    background-color: #333333; /* Darker color for dark mode */
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 3px;
+}
+  

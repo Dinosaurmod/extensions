@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {injectIntl, intlShape} from 'react-intl';
 
+import GUIComponent from '../components/gui/gui.jsx';
+
 class GUI extends React.Component {
     render () {
         const {
@@ -9,7 +11,10 @@ class GUI extends React.Component {
             ...props
         } = this.props;
         return (
-            <h1>THIS IS A TEST</h1>
+            <GUIComponent
+                intl={intl}
+                {...props}
+            />
         );
     }
 }
