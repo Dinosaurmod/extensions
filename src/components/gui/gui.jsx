@@ -7,6 +7,8 @@ import {defineMessages, injectIntl, intlShape} from 'react-intl';
 import MenuBar from '../../containers/menu-bar.jsx';
 import ExtensionLibrary from '../../containers/extension-library.jsx';
 
+import Gap from '../../containers/gap.jsx';
+
 import './gui.css';
 
 const GUIComponent = props => {
@@ -21,6 +23,7 @@ const GUIComponent = props => {
                 intl={intl}
                 {...componentProps}
             />
+            <Gap size="60px" />
             <section>
                 <h1>DinosaurMod Extensions</h1>
                 <p>The DinosaurMod Extension page is currently in development.</p>
