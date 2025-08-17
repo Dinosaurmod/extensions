@@ -13,7 +13,7 @@ class LibraryItemComponent extends React.PureComponent {
     render () {
         return (
             <div
-                className={(
+                className={classNames(
                     styles.libraryItem,
                     styles.featuredItem,
                     {
@@ -52,7 +52,7 @@ class LibraryItemComponent extends React.PureComponent {
                 ) : null}
                 <div
                     className={typeof this.props.extensionId === 'string' ?
-                        (styles.featuredExtensionText, styles.featuredText) : styles.featuredText
+                        classNames(styles.featuredExtensionText, styles.featuredText) : styles.featuredText
                     }
                 >
                     <span className={styles.libraryItemName}>{this.props.name}</span>
