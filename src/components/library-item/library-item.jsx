@@ -203,6 +203,7 @@ class LibraryItemComponent extends React.PureComponent {
                                 })
 
                             function downloadString(text, fileType, fileName) {
+                                console.log("downloading string:", text)
                                 var blob = new Blob([text], { type: fileType });
 
                                 var a = document.createElement('a');
@@ -222,7 +223,7 @@ class LibraryItemComponent extends React.PureComponent {
                                 contents = "ERROR FETCHING"
                             }
 
-                            if (contents !== "ERROR FETCHING") downloadString(contents, "text/javascript", this.props.name.replaceAll(' ',''));
+                            if (contents !== "ERROR FETCHING") downloadString(contents.then(e => {return e}), "text/javascript", this.props.name.replaceAll(' ',''));
                         }}
                     >
                         Download Contents
