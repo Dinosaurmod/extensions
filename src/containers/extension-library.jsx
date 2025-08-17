@@ -38,9 +38,7 @@ class ExtensionLibrary extends React.Component {
         });
 
         return (
-            <div className="extension-library">
-                {extensionNodes}
-            </div>
+            {extensionNodes}
         );
     }
 }
