@@ -5,7 +5,7 @@ import {injectIntl, intlShape} from 'react-intl';
 
 import moonIcon from './moon.svg';
 
-import styles from './menu-bar.css';
+import './menu-bar.css';
 
 const MenuBarComponent = function (props) {
     const { intl } = props;
@@ -13,7 +13,7 @@ const MenuBarComponent = function (props) {
         <nav className="menu-bar">
             <ul className="menu-bar_ul">
                 <li className="menu-bar_li">
-                    <a id="IconImage" href="https://dinosaurmod.github.io/Dino-Home"><img src="https://dinosaurmod.github.io/favicon.ico" alt="Icon"/></a>
+                    <a id="IconImage"><img src="https://dinosaurmod.github.io/favicon.ico" alt="Icon"/></a>
                 </li>
                 <li className="menu-bar_li">
                     <a className="menu-bar_a" id="darkModeToggle"><img src={moonIcon} alt="Moon Icon"/></a>

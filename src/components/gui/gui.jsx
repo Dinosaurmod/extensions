@@ -9,7 +9,7 @@ import ExtensionLibrary from '../../containers/extension-library.jsx';
 
 import {BRAND_NAME} from '../../lib/brand.js';
 
-import styles from './gui.css';
+import './gui.css';
 
 const GUIComponent = props => {
     const {
@@ -23,13 +23,11 @@ const GUIComponent = props => {
                 intl={intl}
                 {...componentProps}
             />
-            <section>
-                <h1>{BRAND_NAME}</h1>
-                <ExtensionLibrary
-                    intl={intl}
-                    {...componentProps}
-                />
-            </section>
+            <h1>{BRAND_NAME}</h1>
+            <ExtensionLibrary
+                intl={intl}
+                {...componentProps}
+            />
         </div>
     )
 }

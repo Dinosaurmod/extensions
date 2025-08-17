@@ -95,10 +95,10 @@ class LibraryItemComponent extends React.PureComponent {
                 )}
 
                 {this.props.credits && this.props.credits.length > 0 && (
-                    <div className={"extensionLinks"}>
+                    <div className={"featuredExtensionCollaboration"}>
                         <div>
                             <FormattedMessage
-                                defaultMessage="Created by:"
+                                defaultMessage="Credits to:"
                                 description="Appears in the extension list. Followed by a list of names."
                                 id="tw.createdBy"
                             />
