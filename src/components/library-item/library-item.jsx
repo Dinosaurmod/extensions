@@ -187,7 +187,7 @@ class LibraryItemComponent extends React.PureComponent {
                     >
                         View
                     </button>
-                    <button
+                    {/*<button
                         className={"download"}
                         onClick={() => {
                             const url = this.props.extensionId;
@@ -229,7 +229,7 @@ class LibraryItemComponent extends React.PureComponent {
                         }}
                     >
                         Download Contents
-                    </button>
+                    </button>*/}
                 </div>
             </div>
         );
