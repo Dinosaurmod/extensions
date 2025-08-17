@@ -34,7 +34,7 @@ const menuItems = [
         extensionId: 'https://gabsthecuriouskid.github.io/DinosaurModExtensions/extensions/python.js',
         iconURL: dmPythonIcon,
         description: 'Run your own custom code written in Python using Pyodide!',
-        credits: 'Pyodide',
+        credits: ['Pyodide'],
         featured: true
     },
     {
@@ -42,7 +42,7 @@ const menuItems = [
         extensionId: 'https://gabsthecuriouskid.github.io/DinosaurModExtensions/extensions/lua.js',
         iconURL: dmLuaIcon,
         description: 'Run your own custom code written in Lua using Fengari!',
-        credits: 'Fengari',
+        credits: ['Fengari'],
         featured: true
     },
 ];
