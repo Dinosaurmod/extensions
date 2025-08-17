@@ -13,9 +13,9 @@ class LibraryItemComponent extends React.PureComponent {
     render () {
         return (
             <div
-                className={classNames(
-                    styles["library-item"],
-                    styles["featured-item"],
+                className={(
+                    styles.libraryItem,
+                    styles.featuredItem,
                     {
                         [styles.disabled]: this.props.disabled
                     },
@@ -52,7 +52,7 @@ class LibraryItemComponent extends React.PureComponent {
                 ) : null}
                 <div
                     className={typeof this.props.extensionId === 'string' ?
-                        classNames(styles.featuredExtensionText, styles.featuredText) : styles.featuredText
+                        (styles.featuredExtensionText, styles.featuredText) : styles.featuredText
                     }
                 >
                     <span className={styles.libraryItemName}>{this.props.name}</span>
