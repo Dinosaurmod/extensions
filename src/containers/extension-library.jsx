@@ -41,11 +41,13 @@ class ExtensionLibrary extends React.Component {
             <React.Fragment>
                 <style>
                     {`
-                        .extension-library {
-                            display: flex;
-                            flex-wrap: wrap;
-                            gap: 1rem;
-                        }
+.extension-library {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    justify-content: center;
+    align-items: flex-start;
+}
                     `}
                 </style>
                 <div className="extension-library">

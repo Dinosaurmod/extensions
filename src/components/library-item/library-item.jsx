@@ -169,6 +169,67 @@ class LibraryItemComponent extends React.PureComponent {
                         </div>
                     </div>
                 ) : null}
+
+                <div className={"libraryItemButtonContainer"}>
+                    <button
+                        className={"copy"}
+                        onClick={() => {
+                            navigator.clipboard.writeText(this.props.extensionId);
+                        }}
+                    >
+                        Copy URL
+                    </button>
+                    <button
+                        className={"view"}
+                        onClick={() => {
+                            window.open('https://dinosaurmod.github.io/editor.html?extension=' + this.props.extensionId, '_blank')
+                        }}
+                    >
+                        View
+                    </button>
+                    <button
+                        className={"download"}
+                        onClick={() => {
+                            const url = this.props.extensionId;
+
+                            let contents, fetchResult;
+
+                            fetch(url)
+                                .then(response => {
+                                    if (!response.ok) {
+                                        throw new Error("HTTP error " + response.status);
+                                    }
+                                    return response.text();
+                                })
+                                .then(text => {
+                                    fetchResult = text;
+                                })
+                                .catch(error => {
+                                    fetchResult = error;
+                                });
+
+                            function downloadString(text, fileType, fileName) {
+                                var blob = new Blob([text], { type: fileType });
+
+                                var a = document.createElement('a');
+                                a.download = fileName;
+                                a.href = URL.createObjectURL(blob);
+                                a.dataset.downloadurl = [fileType, a.download, a.href].join(':');
+                                a.style.display = "none";
+                                document.body.appendChild(a);
+                                a.click();
+                                document.body.removeChild(a);
+                                setTimeout(function() { URL.revokeObjectURL(a.href); }, 1500);
+                            }
+
+                            fetchResult.then((e) => {contents = e}, (e) => {console.log(e); contents = "ERROR FETCHING"})
+
+                            if (contents !== "ERROR FETCHING") downloadString(contents, "text/javascript", this.props.name.replaceAll(' ',''));
+                        }}
+                    >
+                        Download Contents
+                    </button>
+                </div>
             </div>
         );
     }
