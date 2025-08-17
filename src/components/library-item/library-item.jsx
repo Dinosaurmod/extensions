@@ -2,7 +2,7 @@ import {FormattedMessage, intlShape} from 'react-intl';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import styles from './library-item.module.css';
+import './library-item.module.css';
 import classNames from 'classnames';
 
 import bluetoothIconURL from './bluetooth.svg';
@@ -14,19 +14,19 @@ class LibraryItemComponent extends React.PureComponent {
         return (
             <div
                 className={classNames(
-                    styles.libraryItem,
-                    styles.featuredItem,
+                    "libraryItem",
+                    "featuredItem",
                     {
-                        [styles.disabled]: this.props.disabled
+                        ["disabled"]: this.props.disabled
                     },
-                    typeof this.props.extensionId === 'string' ? styles.libraryItemExtension : null,
-                    this.props.hidden ? styles.hidden : null
+                    typeof this.props.extensionId === 'string' ? "libraryItemExtension" : null,
+                    this.props.hidden ? "hidden" : null
                 )}
                 onClick={this.props.onClick}
             >
-                <div className={styles.featuredImageContainer}>
+                <div className={"featuredImageContainer"}>
                     {this.props.disabled ? (
-                        <div className={styles.comingSoonText}>
+                        <div className={"comingSoonText"}>
                             <FormattedMessage
                                 defaultMessage="Coming Soon"
                                 description="Label for extensions that are not yet implemented"
@@ -35,16 +35,16 @@ class LibraryItemComponent extends React.PureComponent {
                         </div>
                     ) : null}
                     <img
-                        className={styles.featuredImage}
+                        className={"featuredImage"}
                         loading="lazy"
                         draggable={false}
                         src={this.props.iconURL}
                     />
                 </div>
                 {this.props.insetIconURL ? (
-                    <div className={styles.libraryItemInsetImageContainer}>
+                    <div className={"libraryItemInsetImageContainer"}>
                         <img
-                            className={styles.libraryItemInsetImage}
+                            className={"libraryItemInsetImage"}
                             src={this.props.insetIconURL}
                             draggable={false}
                         />
@@ -52,16 +52,16 @@ class LibraryItemComponent extends React.PureComponent {
                 ) : null}
                 <div
                     className={typeof this.props.extensionId === 'string' ?
-                        classNames(styles.featuredExtensionText, styles.featuredText) : styles.featuredText
+                        classNames("featuredExtensionText", "featuredText") : "featuredText"
                     }
                 >
-                    <span className={styles.libraryItemName}>{this.props.name}</span>
+                    <span className={"libraryItemName"}>{this.props.name}</span>
                     <br />
-                    <span className={styles.featuredDescription}>{this.props.description}</span>
+                    <span className={"featuredDescription"}>{this.props.description}</span>
                 </div>
 
                 {(this.props.docsURI || this.props.samples) && (
-                    <div className={styles.extensionLinks}>
+                    <div className={"extensionLinks"}>
                         {this.props.docsURI && (
                             <a
                                 href={this.props.docsURI}
@@ -95,7 +95,7 @@ class LibraryItemComponent extends React.PureComponent {
                 )}
 
                 {this.props.credits && this.props.credits.length > 0 && (
-                    <div className={styles.extensionLinks}>
+                    <div className={"extensionLinks"}>
                         <div>
                             <FormattedMessage
                                 defaultMessage="Created by:"
@@ -116,8 +116,8 @@ class LibraryItemComponent extends React.PureComponent {
                 )}
 
                 {this.props.bluetoothRequired || this.props.internetConnectionRequired || this.props.collaborator ? (
-                    <div className={styles.featuredExtensionMetadata}>
-                        <div className={styles.featuredExtensionRequirement}>
+                    <div className={"featuredExtensionMetadata"}>
+                        <div className={"featuredExtensionRequirement"}>
                             {this.props.bluetoothRequired || this.props.internetConnectionRequired ? (
                                 <div>
                                     <div>
@@ -128,7 +128,7 @@ class LibraryItemComponent extends React.PureComponent {
                                         />
                                     </div>
                                     <div
-                                        className={styles.featuredExtensionMetadataDetail}
+                                        className={"featuredExtensionMetadataDetail"}
                                     >
                                         {this.props.bluetoothRequired ? (
                                             <img src={bluetoothIconURL} />
@@ -140,7 +140,7 @@ class LibraryItemComponent extends React.PureComponent {
                                 </div>
                             ) : null}
                         </div>
-                        <div className={styles.featuredExtensionCollaboration}>
+                        <div className={"featuredExtensionCollaboration"}>
                             {this.props.collaborator ? (
                                 <div>
                                     <div>
@@ -151,7 +151,7 @@ class LibraryItemComponent extends React.PureComponent {
                                         />
                                     </div>
                                     <div
-                                        className={styles.featuredExtensionMetadataDetail}
+                                        className={"featuredExtensionMetadataDetail"}
                                     >
                                         {this.props.collaborator}
                                     </div>
@@ -163,7 +163,7 @@ class LibraryItemComponent extends React.PureComponent {
                                         Created by
                                     </div>
                                     <div
-                                        className={styles.featuredExtensionMetadataDetail}
+                                        className={"featuredExtensionMetadataDetail"}
                                     >
                                         {this.props.extDeveloper}
                                     </div>
