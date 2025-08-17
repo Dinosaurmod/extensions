@@ -21,7 +21,11 @@ const GUIComponent = props => {
                 intl={intl}
                 {...componentProps}
             />
-            <section />
+            <section>
+                <h1>DinosaurMod Extensions</h1>
+                <p>The DinosaurMod Extension page is currently in development.</p>
+                <p>As there are LOTS of visual bugs and limitations.</p>
+            </section>
             <ExtensionLibrary
                 intl={intl}
                 {...componentProps}
