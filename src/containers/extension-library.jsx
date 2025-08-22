@@ -26,6 +26,7 @@ class ExtensionLibrary extends React.Component {
                     internetConnectionRequired={item.internetConnectionRequired}
                     credits={item.credits}
                     extDeveloper={item.extDeveloper}
+                    extDeveloperHREF={item.extDevHREF}
 
                     onBlur={() => {}}
                     onClick={() => {}}

@@ -59,9 +59,9 @@ class LibraryItemComponent extends React.PureComponent {
                     <br />
                     <span
                         className={"featuredDescription"}
-                        nothing={(this.props.description == null).toString()}
+                        nothing={(!!this.props.description)}
                     >
-                        {this.props.description == null ? this.props.description : "No description provided."}
+                        {this.props.description ? this.props.description : "No description provided."}
                     </span>
                 </div>
 
@@ -153,6 +153,20 @@ class LibraryItemComponent extends React.PureComponent {
                                     </div>
                                 </div>
                             ) : null}
+                            {this.props.extDeveloperHREF ? () => { 
+                                const {name, href} = this.props.extDeveloperHREF;
+                                return (
+                                    <div>
+                                        <div>
+                                            Created by
+                                        </div>
+                                        <div
+                                            className={"featuredExtensionMetadataDetail"}
+                                        >
+                                            <a href={href}>{name}</a>
+                                        </div>
+                                    </div>
+                            )} : null}
                             {this.props.credits && this.props.credits.length > 0 && (
                                 <div>
                                     <FormattedMessage
@@ -247,10 +261,8 @@ LibraryItemComponent.propTypes = {
     intl: intlShape,
     bluetoothRequired: PropTypes.bool,
     collaborator: PropTypes.string,
-    extDeveloper: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.node
-    ]),
+    extDeveloper: PropTypes.string,
+    extDeveloperHREF: PropTypes.func,
     description: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.node

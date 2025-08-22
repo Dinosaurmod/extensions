@@ -201,6 +201,14 @@ body.dark-mode .libraryItem {
     margin-right: 0.25rem;
 }
 
+.featuredExtensionMetadataDetail a{
+    color: blue;
+}
+
+.featuredExtensionMetadataDetail a:hover{
+    text-decoration: underline;
+}
+
 .comingSoonText {
     position: absolute;
     background-color: var(--data-primary);

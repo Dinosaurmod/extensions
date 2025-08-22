@@ -52,9 +52,10 @@ const menuItems = [
         extensionId: 'https://gabsthecuriouskid.github.io/DinosaurModExtensions/extensions/Useless_Blocks.js',
         iconURL: 'https://gabsthecuriouskid.github.io/DinosaurModExtensions/images/Useless_Blocks.png',
         description: '',
-        extDeveloper: (
-            <a href="https://www.youtube.com/channel/UCJzRC3HsauioZoc9vKC6W4g">Jambs</a> 
-        ),
+        extDevHREF: {
+            name: "Jambs",
+            href: "https://www.youtube.com/channel/UCJzRC3HsauioZoc9vKC6W4g"
+        },
         featured: true
     },
 ];
