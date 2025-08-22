@@ -31,6 +31,12 @@ const GUIComponent = props => {
                 intl={intl}
                 {...componentProps}
             />
+            <section>
+                <p>Note: Some Extensions may be added to the Main Extension Gallery in DinosaurMod.</p>
+                <Gap size="60px" />
+                <p>DinosaurMod is not affiliated with PenguinMod, TurboWarp, Scratch, the Scratch Team, or the Scratch Foundation.</p>
+                <p><a href="https://github.com/Dinosaurmod/extensions">GitHub</a></p>
+            </section>
         </div>
     )
 }
