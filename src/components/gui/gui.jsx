@@ -33,8 +33,9 @@ const GUIComponent = props => {
             />
             <section>
                 <p>Note: Some Extensions may be added to the Main Extension Gallery in DinosaurMod.</p>
-                <Gap size="60px" />
-                <p>DinosaurMod is not affiliated with PenguinMod, TurboWarp, Scratch, the Scratch Team, or the Scratch Foundation.</p>
+                <Gap size="30px" />
+                <h3>DinosaurMod is not affiliated with PenguinMod, TurboWarp, Scratch, the Scratch Team, or the Scratch Foundation.</h3>
+                <Gap size="10px" />
                 <p><a href="https://github.com/Dinosaurmod/extensions">GitHub</a></p>
             </section>
         </div>

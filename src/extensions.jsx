@@ -59,7 +59,7 @@ const menuItems = [
         iconURL: 'https://gabsthecuriouskid.github.io/DinosaurModExtensions/images/Useless_Blocks.png',
         description: '',
         extDevHREF: {
-            name: "Jambs",
+            name: "Jambs / jlgri",
             href: "https://www.youtube.com/channel/UCJzRC3HsauioZoc9vKC6W4g"
         },
         featured: true
