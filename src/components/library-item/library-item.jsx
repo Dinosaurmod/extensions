@@ -262,7 +262,10 @@ LibraryItemComponent.propTypes = {
     bluetoothRequired: PropTypes.bool,
     collaborator: PropTypes.string,
     extDeveloper: PropTypes.string,
-    extDeveloperHREF: PropTypes.object,
+    extDeveloperHREF: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string,
+        href: PropTypes.string
+    })),
     description: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.node
