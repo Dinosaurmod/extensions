@@ -11,8 +11,13 @@ import internetConnectionIconURL from './internet-connection.svg';
 /* eslint-disable react/prefer-stateless-function */
 class LibraryItemComponent extends React.PureComponent {
     render () {
-        const {name, href} = this.props.extDeveloperHREF;
+        const {
+            extDeveloperHREF
+        } = this.props;
 
+        console.log(extDeveloperHREF)
+        
+        const {name, href} = extDeveloperHREF;
         return (
             <div
                 className={classNames(
