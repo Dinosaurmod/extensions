@@ -20,7 +20,6 @@
     border-color: var(--ui-black-transparent);
     border-radius: var(--space, 0.5rem);
     text-align: center;
-    cursor: pointer;
 }
 
 body.dark-mode .libraryItem {
@@ -203,6 +202,7 @@ body.dark-mode .libraryItem {
 
 .featuredExtensionMetadataDetail a{
     color: blue;
+    cursor: pointer;
 }
 
 .featuredExtensionMetadataDetail a:hover{
@@ -248,6 +248,7 @@ button.view {
     font-size: 1rem;
     background-color: #808080;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 button.copy {

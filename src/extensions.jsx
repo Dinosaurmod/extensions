@@ -21,6 +21,7 @@ const menuItems = [
         extensionId: 'https://gabsthecuriouskid.github.io/DinosaurModExtensions/extensions/typable-tab-character.js',
         iconURL: defaultExtensionIcon,
         description: 'Gives the ability of typing the tab character.',
+        extDeveloper: 'MrIncredibleMaker',
         featured: true
     },
     {
@@ -29,6 +30,7 @@ const menuItems = [
         iconURL: 'https://gabsthecuriouskid.github.io/DinosaurModExtensions/images/githubapi.png',
         description: 'Fetch IDs, Description, etc. from Repositories, Users and Organizations.',
         internetConnectionRequired: true,
+        extDeveloper: 'MrIncredibleMaker',
         featured: true
     },
     {

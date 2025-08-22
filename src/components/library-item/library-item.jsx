@@ -99,7 +99,7 @@ class LibraryItemComponent extends React.PureComponent {
                     </div>
                 )}
 
-                {this.props.bluetoothRequired || this.props.internetConnectionRequired || this.props.collaborator || this.props.extDeveloper || this.props.extDeveloperHREF? (
+                {this.props.bluetoothRequired || this.props.internetConnectionRequired || this.props.collaborator || this.props.extDeveloper || this.props.extDeveloperHREF ? (
                     <div className={"featuredExtensionMetadata"}>
                         <div className={"featuredExtensionRequirement"}>
                             {this.props.bluetoothRequired || this.props.internetConnectionRequired ? (
