@@ -17,6 +17,10 @@ a.active, a:hover, li #darkModeToggle.active {
     /* transition: 0.5s; */
 }
 
+a.active, a:hover {
+    text-decoration: underline;
+}
+
 li #darkModeToggle img {
     width: 30px;
     height: 30px;

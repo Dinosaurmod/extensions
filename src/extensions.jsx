@@ -39,6 +39,8 @@ const menuItems = [
         iconURL: dmPythonIcon,
         description: 'Run your own custom code written in Python using Pyodide!',
         credits: ['Pyodide'],
+        extDeveloper: 'MrIncredibleMaker',
+        internetConnectionRequired: true,
         featured: true
     },
     {
@@ -47,6 +49,8 @@ const menuItems = [
         iconURL: dmLuaIcon,
         description: 'Run your own custom code written in Lua using Fengari!',
         credits: ['Fengari'],
+        extDeveloper: 'MrIncredibleMaker',
+        internetConnectionRequired: true,
         featured: true
     },
     {
