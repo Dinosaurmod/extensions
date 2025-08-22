@@ -11,6 +11,8 @@ import internetConnectionIconURL from './internet-connection.svg';
 /* eslint-disable react/prefer-stateless-function */
 class LibraryItemComponent extends React.PureComponent {
     render () {
+        const {name, href} = this.props.extDeveloperHREF;
+
         return (
             <div
                 className={classNames(
@@ -59,7 +61,7 @@ class LibraryItemComponent extends React.PureComponent {
                     <br />
                     <span
                         className={"featuredDescription"}
-                        nothing={(!!this.props.description)}
+                        nothing={(!!this.props.description).toString()}
                     >
                         {this.props.description ? this.props.description : "No description provided."}
                     </span>
@@ -153,20 +155,18 @@ class LibraryItemComponent extends React.PureComponent {
                                     </div>
                                 </div>
                             ) : null}
-                            {this.props.extDeveloperHREF ? () => { 
-                                const {name, href} = this.props.extDeveloperHREF;
-                                return (
+                            {this.props.extDeveloperHREF ? (
+                                <div>
                                     <div>
-                                        <div>
-                                            Created by
-                                        </div>
-                                        <div
-                                            className={"featuredExtensionMetadataDetail"}
-                                        >
-                                            <a href={href}>{name}</a>
-                                        </div>
+                                        Created by
                                     </div>
-                            )} : null}
+                                    <div
+                                        className={"featuredExtensionMetadataDetail"}
+                                    >
+                                        <a href={href}>{name}</a>
+                                    </div>
+                                </div>
+                            ) : null}
                             {this.props.credits && this.props.credits.length > 0 && (
                                 <div>
                                     <FormattedMessage
