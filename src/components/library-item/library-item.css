@@ -150,7 +150,7 @@ body.dark-mode .libraryItem {
     padding-bottom: .25rem;
 }
 
-[nothing].featuredDescription {
+[nothing="true"].featuredDescription {
     display: block;
     font-weight: normal;
     line-height: 1.375rem;
