@@ -26,8 +26,6 @@ const GUIComponent = props => {
             <section>
                 <Gap size="60px" />
                 <h1>DinosaurMod Extensions</h1>
-                <p>The DinosaurMod Extension page is currently in development.</p>
-                <p>As there are LOTS of visual bugs and limitations.</p>
             </section>
             <ExtensionLibrary
                 intl={intl}

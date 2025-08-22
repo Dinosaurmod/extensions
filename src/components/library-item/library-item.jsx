@@ -57,7 +57,12 @@ class LibraryItemComponent extends React.PureComponent {
                 >
                     <span className={"libraryItemName"}>{this.props.name}</span>
                     <br />
-                    <span className={"featuredDescription"}>{this.props.description}</span>
+                    <span
+                        className={"featuredDescription"}
+                        {this.props.description == "" ? nothing={""} : ""}
+                    >
+                        {this.props.description == "" ? this.props.description : "No description provided."}
+                    </span>
                 </div>
 
                 {(this.props.docsURI || this.props.samples) && (

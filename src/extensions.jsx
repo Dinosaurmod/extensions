@@ -45,6 +45,14 @@ const menuItems = [
         credits: ['Fengari'],
         featured: true
     },
+    {
+        name: 'Useless blocks',
+        extensionId: 'https://gabsthecuriouskid.github.io/DinosaurModExtensions/extensions/Useless_Blocks.js',
+        iconURL: 'https://gabsthecuriouskid.github.io/DinosaurModExtensions/images/Useless_Blocks.png',
+        description: '',
+        extDeveloper: 'jlgri',
+        featured: true
+    },
 ];
 
 export default menuItems;
