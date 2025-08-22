@@ -1,3 +1,5 @@
+import React from 'react';
+
 import defaultExtensionIcon from './icons/placeholder.png';
 
 import dmPythonIcon from './icons/python.png';
@@ -51,7 +53,7 @@ const menuItems = [
         iconURL: 'https://gabsthecuriouskid.github.io/DinosaurModExtensions/images/Useless_Blocks.png',
         description: '',
         extDeveloper: (
-            <a href="https://www.youtube.com/channel/UCJzRC3HsauioZoc9vKC6W4g">Jambs</a> 
+            <a href={"https://www.youtube.com/channel/UCJzRC3HsauioZoc9vKC6W4g"}>Jambs</a> 
         ),
         featured: true
     },
