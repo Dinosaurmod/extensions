@@ -59,7 +59,7 @@ class LibraryItemComponent extends React.PureComponent {
                     <br />
                     <span
                         className={"featuredDescription"}
-                        nothing={(!!this.props.description).toString()}
+                        nothing={(!this.props.description).toString()}
                     >
                         {this.props.description ? this.props.description : "No description provided."}
                     </span>
@@ -99,7 +99,7 @@ class LibraryItemComponent extends React.PureComponent {
                     </div>
                 )}
 
-                {this.props.bluetoothRequired || this.props.internetConnectionRequired || this.props.collaborator ? (
+                {this.props.bluetoothRequired || this.props.internetConnectionRequired || this.props.collaborator || this.props.extDeveloper || this.props.extDeveloperHREF? (
                     <div className={"featuredExtensionMetadata"}>
                         <div className={"featuredExtensionRequirement"}>
                             {this.props.bluetoothRequired || this.props.internetConnectionRequired ? (
