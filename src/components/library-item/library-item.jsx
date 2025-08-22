@@ -59,9 +59,9 @@ class LibraryItemComponent extends React.PureComponent {
                     <br />
                     <span
                         className={"featuredDescription"}
-                        nothing={this.props.description == "" && true}
+                        nothing={(this.props.description == null).toString()}
                     >
-                        {this.props.description == "" ? this.props.description : "No description provided."}
+                        {this.props.description == null ? this.props.description : "No description provided."}
                     </span>
                 </div>
 
@@ -247,7 +247,10 @@ LibraryItemComponent.propTypes = {
     intl: intlShape,
     bluetoothRequired: PropTypes.bool,
     collaborator: PropTypes.string,
-    extDeveloper: PropTypes.string,
+    extDeveloper: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.node
+    ]),
     description: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.node
