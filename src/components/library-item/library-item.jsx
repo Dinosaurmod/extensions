@@ -11,13 +11,6 @@ import internetConnectionIconURL from './internet-connection.svg';
 /* eslint-disable react/prefer-stateless-function */
 class LibraryItemComponent extends React.PureComponent {
     render () {
-        const {
-            extDeveloperHREF
-        } = this.props;
-
-        console.log(extDeveloperHREF)
-        
-        const {name, href} = extDeveloperHREF;
         return (
             <div
                 className={classNames(
@@ -168,7 +161,7 @@ class LibraryItemComponent extends React.PureComponent {
                                     <div
                                         className={"featuredExtensionMetadataDetail"}
                                     >
-                                        <a href={href}>{name}</a>
+                                        <a href={this.props.extDeveloperHREF.href}>{this.props.extDeveloperHREF.name}</a>
                                     </div>
                                 </div>
                             ) : null}
