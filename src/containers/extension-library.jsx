@@ -4,7 +4,7 @@ import {intlShape} from 'react-intl';
 import classNames from 'classnames';
 
 import LibraryItem from '../components/library-item/library-item.jsx';
-import Gap from '../../containers/gap.jsx';
+import Gap from './gap.jsx';
 
 import extensionsData from '../extensions.jsx';
 
