@@ -72,21 +72,21 @@ const jokeMenuItems = [
     },
     {
         name: 'Dogs',
-        extensionId: extensionUrl + 'DOGS.js',
+        extensionId: extensionUrl + 'dogs.js',
         iconURL: defaultExtensionIcon,
         description: 'Blocks related to dogs.',
         featured: true,
         inspiredExt: 'G1nX\'s Cats Extension',
         extDeveloper: 'MrIncredibleMaker'
     },
-    {
+    /*{
         name: 'Dinosaurmod\'s test extension',
         extensionId: extensionUrl + 'test.js',
         iconURL: defaultExtensionIcon,
         description: 'Dinosaurmod\'s own Test Extension to see what\'s possible or not. DON\'T USE THIS IN PRODUCTION as blocks can change and may corrupt your projects.',
         featured: true,
         extDeveloper: 'MrIncredibleMaker'
-    },
+    },*/
 ];
 
 export default [menuItems, jokeMenuItems];
