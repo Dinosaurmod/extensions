@@ -165,6 +165,18 @@ class LibraryItemComponent extends React.PureComponent {
                                     </div>
                                 </div>
                             ) : null}
+                            {this.props.inspiredExt ? (
+                                <div>
+                                    <div>
+                                        Inspired by:
+                                    </div>
+                                    <div
+                                        className={"featuredExtensionMetadataDetail"}
+                                    >
+                                        {this.props.inspiredExt}
+                                    </div>
+                                </div>
+                            ) : null}
                             {this.props.credits && this.props.credits.length > 0 && (
                                 <div>
                                     <FormattedMessage
@@ -274,6 +286,7 @@ LibraryItemComponent.propTypes = {
     hidden: PropTypes.bool,
     iconURL: PropTypes.string,
     insetIconURL: PropTypes.string,
+    inspiredExt: PropTypes.string,
     internetConnectionRequired: PropTypes.bool,
     name: PropTypes.oneOfType([
         PropTypes.string,

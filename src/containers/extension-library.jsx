@@ -14,7 +14,34 @@ class ExtensionLibrary extends React.Component {
 
         const extensionNodes = [];
 
-        extensionsData.forEach(item => {
+        extensionsData[0].forEach(item => {
+            extensionNodes.push(
+                <LibraryItem
+                    {...props}
+                    featured={item.featured}
+                    name={item.name}
+                    extensionId={item.extensionId}
+                    iconURL={item.iconURL}
+                    description={item.description}
+                    internetConnectionRequired={item.internetConnectionRequired}
+                    credits={item.credits}
+                    extDeveloper={item.extDeveloper}
+                    extDeveloperHREF={item.extDevHREF}
+                    inspiredExt={item.inspiredExt}
+
+                    onBlur={() => {}}
+                    onClick={() => {}}
+                    onFocus={() => {}}
+                    onKeyPress={() => {}}
+                    onMouseEnter={() => {}}
+                    onMouseLeave={() => {}}
+                />
+            )
+        });
+        extensionNodes.push(
+            <p>Joke / Livetests Extensions:</p>
+        );
+        extensionsData[1].forEach(item => {
             extensionNodes.push(
                 <LibraryItem
                     {...props}
