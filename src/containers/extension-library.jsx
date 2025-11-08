@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {intlShape} from 'react-intl';
+import classNames from 'classnames';
 
 import LibraryItem from '../components/library-item/library-item.jsx';
 
@@ -39,7 +40,14 @@ class ExtensionLibrary extends React.Component {
             )
         });
         extensionNodes.push(
-            <p>Joke / Livetests Extensions:</p>
+            <p
+                className={classNames(
+                    "libraryItem",
+                    "featuredItem"
+                )}
+            >
+                Joke / Livetests Extensions:
+            </p>
         );
         extensionsData[1].forEach(item => {
             extensionNodes.push(
@@ -54,6 +62,7 @@ class ExtensionLibrary extends React.Component {
                     credits={item.credits}
                     extDeveloper={item.extDeveloper}
                     extDeveloperHREF={item.extDevHREF}
+                    inspiredExt={item.inspiredExt}
 
                     onBlur={() => {}}
                     onClick={() => {}}
