@@ -200,22 +200,26 @@ class LibraryItemComponent extends React.PureComponent {
                 ) : null}
 
                 <div className={"libraryItemButtonContainer"}>
-                    <button
-                        className={"copy"}
-                        onClick={() => {
-                            navigator.clipboard.writeText(this.props.extensionId);
-                        }}
-                    >
-                        Copy URL
-                    </button>
-                    <button
-                        className={"view"}
-                        onClick={() => {
-                            window.open('https://dinosaurmod.github.io/editor.html?extension=' + this.props.extensionId, '_blank')
-                        }}
-                    >
-                        View
-                    </button>
+                    {!this.props.disabled ? (
+                        <React.Fragment>
+                            <button
+                                className={"copy"}
+                                onClick={() => {
+                                    navigator.clipboard.writeText(this.props.extensionId);
+                                }}
+                            >
+                                Copy URL
+                            </button>
+                            <button
+                                className={"view"}
+                                onClick={() => {
+                                    window.open('https://dinosaurmod.github.io/editor.html?extension=' + this.props.extensionId, '_blank')
+                                }}
+                            >
+                                View
+                            </button>
+                        </React.Fragment>
+                    ) : null}
                     {/*<button
                         className={"download"}
                         onClick={() => {

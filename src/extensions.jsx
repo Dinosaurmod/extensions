@@ -79,6 +79,16 @@ const jokeMenuItems = [
         inspiredExt: 'G1nX\'s Cats Extension',
         extDeveloper: 'MrIncredibleMaker'
     },
+    {
+        name: 'Functions and Tests',
+        extensionId: extensionUrl + 'jasmine.js',
+        iconURL: defaultExtensionIcon,
+        description: '',
+        featured: true,
+        disabled: true,
+        inspiredExt: 'Jasmine (JS Framework)',
+        extDeveloper: 'MrIncredibleMaker'
+    },
     /*{
         name: 'Dinosaurmod\'s test extension',
         extensionId: extensionUrl + 'test.js',
