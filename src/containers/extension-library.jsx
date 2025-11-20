@@ -47,6 +47,7 @@ class ExtensionLibrary extends React.Component {
                 <LibraryItem
                     {...props}
                     featured={item.featured}
+                    disabled={item.disabled}
                     name={item.name}
                     extensionId={item.extensionId}
                     iconURL={item.iconURL}
