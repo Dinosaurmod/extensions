@@ -43,7 +43,10 @@
     });
 
     const IsFireFox = (navigator.userAgent.includes('Firefox')) ? true : null
-    const IsSafari = (navigator.userAgent.includes('Safari')) ? true : null
+    const isSafari = () =>
+      !navigator.userAgentData &&
+      /Safari\//.test(navigator.userAgent) &&
+      !/Chrom(e|ium)\//.test(navigator.userAgent);
 
     class Extension {
       constructor(runtime) {
@@ -252,7 +255,7 @@
                     opcode: 'WebExt_Favicon',
                     text: 'use [URL] as favicon',
                     blockType: Scratch.BlockType.COMMAND,
-                    hideFromPalette: IsSafari,
+                    hideFromPalette: IsSafari(),
                     arguments: {
                         URL: {
                             type: Scratch.ArgumentType.STRING,
@@ -517,7 +520,7 @@
                   {
                     opcode: 'WebExt_shareURL',
                     blockType: Scratch.BlockType.COMMAND,
-                    hideFromPalette: IsFireFox || IsSafari || false,
+                    hideFromPalette: IsFireFox || IsSafari(),
                     text: 'share URL [URL] with [TITLE] and message [MESSAGE]',
                     arguments: {
                       URL: {
@@ -538,7 +541,7 @@
                     opcode: 'WebExt_canShareURL',
                     text: 'can share URL?',
                     blockType: Scratch.BlockType.BOOLEAN,
-                    hideFromPalette: IsFireFox || IsSafari || false,
+                    hideFromPalette: IsFireFox || IsSafari(),
                     arguments: {}
                   },
                   {
