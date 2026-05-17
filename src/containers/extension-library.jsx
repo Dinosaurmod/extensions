@@ -86,7 +86,7 @@ class ExtensionLibrary extends React.Component {
                 </div>
                 <section>
                     <Gap size="10px" />
-                    <h1>Joke / Livetests Extensions</h1>
+                    <h1>Joke / Livetests / Legacy Extensions</h1>
                 </section>
                 <Gap size="10px" />
                 <div className="extension-library">

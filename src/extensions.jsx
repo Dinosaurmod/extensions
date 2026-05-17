@@ -4,6 +4,7 @@ import defaultExtensionIcon from './icons/placeholder.png';
 
 import dmPythonIcon from './icons/python.png';
 import dmLuaIcon from './icons/lua.png';
+import dmKeysPlusIcon from './icons/keysPlus.png';
 
 const extensionUrl = "https://raw.githubusercontent.com/Dinosaurmod/extensions/refs/heads/main/src/extensions/";
 const legacyExtensionUrl = "https://gabsthecuriouskid.github.io/DinosaurModExtensions/";
@@ -20,11 +21,12 @@ const menuItems = [
         disabled: false
     },
     {
-        name: 'Typable Tab Key',
-        extensionId: extensionUrl + 'typable-tab-character.js',
-        iconURL: defaultExtensionIcon,
-        description: 'Gives the ability of typing the tab character.',
+        name: 'Keys+',
+        extensionId: extensionUrl + 'keys-plus-extension.js',
+        iconURL: dmKeysPlusIcon,
+        description: 'Detect more keys when they are pressed or hit and make certain keys typable.',
         extDeveloper: 'MrIncredibleMaker',
+        inspiredExt: 'Typable Tab Character Extension and More Keys Events (by julmik6478) Extension'
         featured: true
     },
     {
@@ -59,6 +61,14 @@ const menuItems = [
 ];
 
 const jokeMenuItems = [
+    {
+        name: 'Typable Tab Key',
+        extensionId: extensionUrl + 'typable-tab-character.js',
+        iconURL: defaultExtensionIcon,
+        description: 'This Extension was replaced by the Keys+ Extension. Gives the ability of typing the tab character.',
+        extDeveloper: 'MrIncredibleMaker',
+        featured: true
+    },
     {
         name: 'Useless blocks',
         extensionId: extensionUrl + 'Useless_Blocks.js',
