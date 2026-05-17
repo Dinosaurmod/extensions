@@ -26,7 +26,7 @@ const menuItems = [
         iconURL: dmKeysPlusIcon,
         description: 'Detect more keys when they are pressed or hit and make certain keys typable.',
         extDeveloper: 'MrIncredibleMaker',
-        inspiredExt: 'Typable Tab Character Extension and More Keys Events (by julmik6478) Extension'
+        inspiredExt: 'Typable Tab Character Extension and More Keys Events (by julmik6478) Extension',
         featured: true
     },
     {
