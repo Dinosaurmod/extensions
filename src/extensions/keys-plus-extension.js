@@ -250,9 +250,12 @@
         }
     }
 
-    function handleKeyUp(event) {
+    async function handleKeyUp(event) {
         let eventKey = variables["keysList"][event.key];
 
+        while (eventKey === undefined) {
+            await new Promise(resolve => setTimeout(resolve, 10));
+        }
         eventKey["isPressed?"] = false;
         eventKey["isPressed_TEMP_WaitUntil?"] = false;
 
