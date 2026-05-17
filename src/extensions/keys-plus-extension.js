@@ -289,6 +289,7 @@
             this.Scratch = Sc
             this.VM = this.Scratch.vm
             this.Runtime = this.VM.runtime
+            this.unsandboxed = this.Scratch.extensions.unsandboxed
 
             addEventForKeydown()
         }
@@ -358,7 +359,7 @@
                         opcode: 'whenkeypressed',
                         text: 'when [KEYS_MENU] key pressed',
                         blockType: Scratch.BlockType.HAT,
-                        hideFromPalette: !this.Scratch.extensions.unsandboxed,
+                        hideFromPalette: !this.unsandboxed,
                         arguments: {
                             KEYS_MENU: {
                                 type: Scratch.ArgumentType.STRING,
@@ -370,12 +371,12 @@
                     {
                         blockType: "label",
                         text: "When key pressed is not supported.",
-                        hideFromPalette: !!this.Scratch.extensions.unsandboxed
+                        hideFromPalette: !!this.unsandboxed
                     },
                     {
                         blockType: "label",
                         text: "Reason: Sandboxed",
-                        hideFromPalette: !!this.Scratch.extensions.unsandboxed
+                        hideFromPalette: !!this.unsandboxed
                     },
                     {
                         opcode: 'whenkeyhit',
