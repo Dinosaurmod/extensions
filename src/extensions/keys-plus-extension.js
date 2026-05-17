@@ -7,6 +7,19 @@
 (function (Scratch) {
     const variables = {};
 
+    if (!Scratch.extensions.unsandboxed) {
+        throw new Error('This extension must run unsandboxed'); // document doesn't work when run sandboxed
+    }
+
+    /*if (!Scratch.extensions.unsandboxed) {
+        Scratch.vm = {}
+        Scratch.vm.runtime = {
+            startHats: (hat) => {
+                // placeholder because the function doesn't exist when run sandboxed
+            }
+        }
+    }*/ // i tried to get this extension to work when run sandboxed but to no avail (document doesn't work)
+
     variables["keysList"] = {
         "CurrentKeyPressed": "",
         "Tab": {
@@ -345,6 +358,7 @@
                         opcode: 'whenkeypressed',
                         text: 'when [KEYS_MENU] key pressed',
                         blockType: Scratch.BlockType.HAT,
+                        hideFromPalette: !this.Scratch.extensions.unsandboxed,
                         arguments: {
                             KEYS_MENU: {
                                 type: Scratch.ArgumentType.STRING,
@@ -352,6 +366,16 @@
                             }
                         },
                         //hideFromPalette: !isSetup
+                    },
+                    {
+                        blockType: "label",
+                        text: "When key pressed is not supported.",
+                        hideFromPalette: !!this.Scratch.extensions.unsandboxed
+                    },
+                    {
+                        blockType: "label",
+                        text: "Reason: Sandboxed",
+                        hideFromPalette: !!this.Scratch.extensions.unsandboxed
                     },
                     {
                         opcode: 'whenkeyhit',

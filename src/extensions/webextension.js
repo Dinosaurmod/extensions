@@ -43,7 +43,7 @@
     });
 
     const IsFireFox = (navigator.userAgent.includes('Firefox')) ? true : null
-    const isSafari = () =>
+    const IsSafari = () =>
       !navigator.userAgentData &&
       /Safari\//.test(navigator.userAgent) &&
       !/Chrom(e|ium)\//.test(navigator.userAgent);
