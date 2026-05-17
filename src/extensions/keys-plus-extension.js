@@ -168,7 +168,7 @@
             "isPressed_TEMP_WaitUntil?": false
             // "listenerAdded": false
         },
-        "°": {
+        /*"°": {
             "altname": "°",
             "enabled": true,
             "isPressed?": false,
@@ -198,7 +198,7 @@
             "isPressed_TEMP?": false,
             "isPressed_TEMP_WaitUntil?": false
             // "listenerAdded": false
-        },
+        },*/
     }
 
     variables["typingKeysList"] = {
@@ -251,11 +251,12 @@
     }
 
     async function handleKeyUp(event) {
-        let eventKey = variables["keysList"][event.key];
-
-        while (eventKey === undefined) {
+        while (variables["keysList"][event.key] === undefined) {
             await new Promise(resolve => setTimeout(resolve, 10));
         }
+
+        let eventKey = variables["keysList"][event.key];
+
         eventKey["isPressed?"] = false;
         eventKey["isPressed_TEMP_WaitUntil?"] = false;
 
